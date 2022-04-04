@@ -15,17 +15,19 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
         const root = document.getElementById("root");
-        const Title = () => (<span id="title" onMouseEnter={() => console.log("mouseEnter")}>Hello I'm Span</span>);
-        const Button = () => (<button onClick={() => console.log("Hi")} >Click</button>);
+        let counter = 0;
+        function countUp() {
+            counter = counter + 1
+            render();
+        }
+        function render() { ReactDOM.render(<Container />, root) };
         const Container = () =>
-        (
             <div>
-                <Title />
-                <Button />
+                <span id="title">Click : {counter} </span>
+                <button onClick={countUp}>Click</button>
             </div>
-        )
 
-        ReactDOM.render(<Container />, root);
+        render();
     </script>
 </body>
 
