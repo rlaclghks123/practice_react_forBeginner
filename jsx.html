@@ -33,7 +33,6 @@
             }
             return (
                 <div>
-                    <h1>Super Converter</h1>
                     <div>
                         <label htmlFor="minutes">Minutes</label>
                         <input placeholder="Minutes" id="minutes" text="number" value={flipped ? amount * 60 : amount} onChange={onChange} disabled={flipped}></input>
@@ -48,8 +47,33 @@
             )
         }
         function KmToMiles() {
+            const [amount, setAmount] = React.useState(0);
+            const [flipped, setFlipped] = React.useState(false);
+
+
+            function onFlippped() {
+                reset();
+                setFlipped((current) => !current)
+            }
+            function onChange(event) {
+                setAmount(event.target.value);
+            }
+            function reset() {
+                setAmount(0);
+            }
             return (
-                <h3>This is Km To Miles</h3>
+                <div>
+                    <div>
+                        <label htmlFor="kiloMeter">KiloMeter</label>
+                        <input onChange={onChange} value={flipped ? amount * 1.609 : amount} id="kiloMeter" placeholder="KiloMeter" disabled={flipped}></input>
+                    </div>
+                    <div>
+                        <label htmlFor="miles">Miles</label>
+                        <input onChange={onChange} value={flipped ? amount : amount / 1.609} id="miles" placeholder="Miles" disabled={!flipped}></input>
+                    </div>
+                    <button onClick={reset}>Reset</button>
+                    <button onClick={onFlippped}>Flip</button>
+                </div>
             )
         }
         function App() {
