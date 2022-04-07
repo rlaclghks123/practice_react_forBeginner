@@ -16,7 +16,15 @@ function App() {
     console.log("This render is one time")
   }, [])
 
+  useEffect(() => {
+    if (keyword !== "" && keyword.length > 5) {
+      console.log("keyword is :", keyword);
+    }
+  }, [keyword]);
 
+  useEffect(() => {
+    console.log("Click render");
+  }, [value]);
   return (
     <div>
       <h1> {value} This is useEffect Test!</h1>
