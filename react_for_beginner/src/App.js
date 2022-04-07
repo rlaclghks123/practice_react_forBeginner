@@ -1,37 +1,24 @@
 import { useState, useEffect } from "react";
 
+function Hello() {
+  useEffect(() => {
+    console.log("Hi!");
+    return () => { console.log("Bye!") };
+  })
+  return (
+    <h1>Hello!</h1>
+  )
+}
 
 function App() {
-  const [value, setValue] = useState(0);
-  const [keyword, setKeyword] = useState("");
-  function onClick() {
-    setValue((prev) => prev + 1);
-  }
-  function onChagne(event) {
-    setKeyword(event.target.value);
-  }
-  console.log("This render is always");
+  const [showing, setShowing] = useState(false);
 
-  useEffect(() => {
-    console.log("This render is one time")
-  }, [])
+  const onClick = () => setShowing((prev) => !prev);
 
-  useEffect(() => {
-    if (keyword !== "" && keyword.length > 5) {
-      console.log("keyword is :", keyword);
-    }
-  }, [keyword]);
-
-  useEffect(() => {
-    console.log("Click render");
-  }, [value]);
   return (
     <div>
-      <h1> {value} This is useEffect Test!</h1>
-      <input value={keyword} placeholder="Search" onChange={onChagne}></input>
-      <div>
-        <button onClick={onClick}>Click</button>
-      </div>
+      {showing ? <Hello /> : null}
+      <button onClick={onClick}>{showing ? "Hide" : "Show"}</button>
     </div>
   );
 }
