@@ -17,7 +17,9 @@ function App() {
     setToDo("");
   }
 
-
+  const onClick = (index) => {
+    setToDos(toDos.filter((item, key) => index !== key));
+  }
   return (
     <div>
       <h1>{toDos.length}</h1>
@@ -26,6 +28,7 @@ function App() {
         <button>Add To Do</button>
         <ul>
           {toDos.map((item, key) => <li key={key}>{item}
+            <button onClick={() => onClick(key)}>❌</button>
           </li>)}
         </ul>
       </form>
