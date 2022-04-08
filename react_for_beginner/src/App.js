@@ -9,11 +9,13 @@ function App() {
   const [price, setPrice] = useState(0);
   const [flipped, setFlipped] = useState(false);
 
+  const getCoin = async () => {
+    const json = await (await fetch(`https://api.coinpaprika.com/v1/tickers?limit=10 `)).json();
+    setCoins(json);
+    setLoading(false)
+  }
   useEffect(() => {
-    fetch("https://api.coinpaprika.com/v1/tickers?limit=10 ").then((response) => response.json()).then((json) => {
-      setCoins(json);
-      setLoading(false);
-    });
+    getCoin();
   }, []);
 
   function onChange(event) {
