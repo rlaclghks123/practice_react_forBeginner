@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/github.io/practice_react_forBeginner.git/static/js/main.07fdb1cf.js",
-    "index.html": "/github.io/practice_react_forBeginner.git/index.html",
-    "main.07fdb1cf.js.map": "/github.io/practice_react_forBeginner.git/static/js/main.07fdb1cf.js.map"
+    "main.js": "/practice_react_forBeginner/static/js/main.07fdb1cf.js",
+    "index.html": "/practice_react_forBeginner/index.html",
+    "main.07fdb1cf.js.map": "/practice_react_forBeginner/static/js/main.07fdb1cf.js.map"
   },
   "entrypoints": [
     "static/js/main.07fdb1cf.js"
