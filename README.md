@@ -28,8 +28,6 @@
 
           - Prop Types : Props로 주는 데이터의 형식을 지정 하여 에러를 방지 할 수 있는 패키지이다.
 
-          - Prop Types : Props로 주는 데이터의 형식을 지정 하여 에러를방지 할 수 있는 패키지이다. 
-
           - Creat-React-App : React Application을 만들때 가장 좋은 Tool이며 분할 방식 하기에 아주 좋다.
 
           - useEffect : React가 계속 rerender할때 사용하는 함수로서, API호출이나 중요한 일을 할때와 같이 한번만 코드를 실행 할 수 있으며, 필요에 따라 원하는 요소에 변화에 따라 코드를 실행 할 수 있도록 해준다.
