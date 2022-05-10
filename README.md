@@ -10,6 +10,12 @@
 
 - ## <배운이론 및 기술>
 
+- - [x]  pug 사용
+       
+        - extends로 상속하여 코드 반복 방지
+        - partials을 통해 코드 반복 방지
+        - mixin을 사용하여 코드 반복 방지
+  ---
 
   - - [x]  React란
          
@@ -18,9 +24,22 @@
           - 웹에서도 사용할수 있고, React-native를 통해 앱으로도 사용할 수 있다.
     ---
 
-  - - [x]  배운이론 및 기술
+## <배운이론 및 기술>
+- - [x]  JSX
          
-          - JSX :  JavaScript의 확장 문법이며, Html과 배우 비슷하게 사용할 수 있으며 {} 를 사용하면 JavaScript 문법도 사용 할 수 있다.
+          -  JavaScript의 확장 문법이며 공식 JavaScript문법은 아니지만, babel을 통해 변환하여 사용 할 수 있다. 
+          문법 규칙 : 1. 컴포넌트에 여러 요소가 있다면 반드시 부모 요소 하나로 감싸야 한다.
+               ex) return ( <div><h1>Hello</h1> <h2>Bye<h2></div>) 
+
+                  2. JavaScript 문법을 사용할려면 {}로  감싸서 표현한다. 
+                   ex) <h1>Hello {name} </h1>
+
+                  3. 3항 연산자 사용이 가능하다. 
+                  ex) {name==='chiman' ? (<h1>CHI MAN</h1>) : (<h1>Anonymous</h1>)} 
+
+                     
+- - [x]  JSX
+         
           
           - State : 변수 대신 사용하는 데이터의 저장 공간이며 데이터가 변경되면, Re Render하여 새로고침 없이 동작시킬 수 있다.
         
@@ -34,3 +53,4 @@
 
           - Clean Up : useEffect를 사용할때 코드가 Destory될때 작동하는 함수이다. useEffect함수 내에 코드를 실행하고 return 후에 코드를 작성해주면 된다.  
     ---
+
