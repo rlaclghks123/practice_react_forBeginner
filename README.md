@@ -38,11 +38,20 @@
                   ex) {name==='chiman' ? (<h1>CHI MAN</h1>) : (<h1>Anonymous</h1>)} 
 
                      
-- - [x]  JSX
+- - [x]  State
          
           
-          - State : 변수 대신 사용하는 데이터의 저장 공간이며 데이터가 변경되면, Re Render하여 새로고침 없이 동작시킬 수 있다.
+          - State : 변수 대신 사용하는 데이터의 저장 공간이며 데이터가 변경되면, 자동으로 Re Render하여 새로고침 없이 동작시킬 수 있다.
         
+        사용방법
+        1. React 라이브러리에 있는 useState()를 사용하며, 초기값을 설정해준다.
+        ex) const [state, setState] = useState(0) 
+
+        2. Event를 사용하여, state의 변화를 setState에 저장해준다.
+        ex) const onClick = () => {setState(state+1)};
+    ---
+    
+- - [x]  Props    
           - Props : 부모컴포넌트로 부터 자식 컴포넌트에 데이터를 보낼 수 있는 방법이다. 함수에서 인자를 보내는것 과 비슷
 
           - Prop Types : Props로 주는 데이터의 형식을 지정 하여 에러를 방지 할 수 있는 패키지이다.
@@ -52,5 +61,4 @@
           - useEffect : React가 계속 rerender할때 사용하는 함수로서, API호출이나 중요한 일을 할때와 같이 한번만 코드를 실행 할 수 있으며, 필요에 따라 원하는 요소에 변화에 따라 코드를 실행 할 수 있도록 해준다.
 
           - Clean Up : useEffect를 사용할때 코드가 Destory될때 작동하는 함수이다. useEffect함수 내에 코드를 실행하고 return 후에 코드를 작성해주면 된다.  
-    ---
 
