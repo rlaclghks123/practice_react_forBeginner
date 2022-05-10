@@ -49,8 +49,11 @@
 
         2. Event를 사용하여, state의 변화를 setState에 저장해준다.
         ex) const onClick = () => {setState(state+1)};
+
+        3. 원하는곳에 사용해준다.
+        ex) <button>onClick={onClick}<button> 
     ---
-    
+
 - - [x]  Props    
           - Props : 부모컴포넌트로 부터 자식 컴포넌트에 데이터를 보낼 수 있는 방법이다. 함수에서 인자를 보내는것 과 비슷
 
