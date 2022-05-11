@@ -55,8 +55,22 @@
     ---
 
 - - [x]  Props    
-          - Props : 부모컴포넌트로 부터 자식 컴포넌트에 데이터를 보낼 수 있는 방법이다. 함수에서 인자를 보내는것 과 비슷
+ 
+          - Props : properties의 줄임말으로서 부모컴포넌트로 부터 자식 컴포넌트에 데이터를 보낼 수 있는 방법이다. 함수에서 인자를 보내는것 과 비슷하다.
+          style, event , text, boolean 많은것들을 props로 보낼 수 있다. 
+          같은코드의 일부분만 다를 경우, 복사 붙혀넣기를 계속 하는 대신, props를 사용하면 코드의 반복을 줄일수 있다.
 
+           사용방법
+           1. 인자를 보내준다. 
+           ex) <div><Button text="Add"></div>
+
+           2. 받은 인자를 통해 사용하길 원하는 곳에 값을 지정해준다. 
+            ex-1) function Button(props) {<button>{props.text}</button>}
+            ex-2)function Button({text}) {<button>{text}</button>}
+
+   ---
+
+- - [x]  Props    
           - Prop Types : Props로 주는 데이터의 형식을 지정 하여 에러를 방지 할 수 있는 패키지이다.
 
           - Creat-React-App : React Application을 만들때 가장 좋은 Tool이며 분할 방식 하기에 아주 좋다.
