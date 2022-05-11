@@ -82,8 +82,18 @@
             Ex) Button.propTypes = { text: PropTypes.string.isRequired }
 
 
-- - [x]  Prop Types
-          - Creat-React-App : React Application을 만들때 가장 좋은 Tool이며 분할 방식 하기에 아주 좋다.
+- - [x]  Create-React-App
+ 
+          - Create-React-App : 간단히 CRA 라고 부르며, CRA는 리액트 개발을 바로 시작할 수 있도록 프로젝트 구조 작업, 설정 작업 등을 자동으로 진행해주는 도구이자 명령어이다.  특정 환경의 개발을 바로 진행할 수 있도록 만든 기초 환경을 통틀어 보일러 플레이트(boiler plate)라고 부르기도 하는데, CRA는 그러한 보일러 플레이트의 일종입다.  React Application을 만들때 가장 좋은 Tool이며 분할 방식 하기에 아주 좋다.
+
+            사용방법
+            1. npx를 설치한다.  npm i npx -g
+            2. npx create-react-app 원하는 폴더명을 터미널에 입력한다. ex) npx create-react-app react_for_Beginner
+            3. VsCode로 폴더를 실행한다.
+            4. 사용할 폴더를 생성 or 사용하지 않는폴더를 삭제 등 작업한다.
+            5. npm start를 통해 실행한다.
+      ---
+      
 
           - useEffect : React가 계속 rerender할때 사용하는 함수로서, API호출이나 중요한 일을 할때와 같이 한번만 코드를 실행 할 수 있으며, 필요에 따라 원하는 요소에 변화에 따라 코드를 실행 할 수 있도록 해준다.
 
