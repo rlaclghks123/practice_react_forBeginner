@@ -94,8 +94,16 @@
             5. npm start를 통해 실행한다.
       ---
       
+- - [x]  useEffect
+ 
+          - useEffect : React가 계속 rerender할때 한번만 실행후 rerender되지 않도록 하는 함수로서, API호출이나 중요한 일을 할때와 같이 한번만 코드를 실행 하고, 값이 변하지 않는 한 re render되지 않도록 한다.
+          사용방법
+          1. import 한다. import {useEffect} from "react" 
+          2. useEffect의 기본형태 : useEffect(function, deps); deps란 배열 형태이며, 배열 안에는 검사하고자 하는 특정값 또는 빈배열이 들어간다.
+          3. useEffect를 사용한다. ex) useEffect(Afunction, [keyword]) => keyword가 변화할때 Afunction이 한번만 작동한다.
+          2-2. 만약 한번만 사용하고 싶다면 []를 빈 배열로 작성해준다. Ex) useEffect(Afunction, [])
 
-          - useEffect : React가 계속 rerender할때 사용하는 함수로서, API호출이나 중요한 일을 할때와 같이 한번만 코드를 실행 할 수 있으며, 필요에 따라 원하는 요소에 변화에 따라 코드를 실행 할 수 있도록 해준다.
+- - [x]  useEffect
 
           - Clean Up : useEffect를 사용할때 코드가 Destory될때 작동하는 함수이다. useEffect함수 내에 코드를 실행하고 return 후에 코드를 작성해주면 된다.  
 
