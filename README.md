@@ -106,4 +106,5 @@
 - - [x]  useEffect
 
           - Clean Up : useEffect를 사용할때 코드가 Destory될때 작동하는 함수이다. useEffect함수 내에 코드를 실행하고 return 후에 코드를 작성해주면 된다.  
+          사용방법:  useEffect(()=>{aFunction return()=> cleanUp Function},[])
 
