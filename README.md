@@ -145,7 +145,7 @@
           3. useEffect를 사용한다. ex) useEffect(Afunction, [keyword]) => keyword가 변화할때 Afunction이 한번만 작동한다.
           2-2. 만약 한번만 사용하고 싶다면 []를 빈 배열로 작성해준다. Ex) useEffect(Afunction, [])
 
-  - - [x]  useEffect
+  - - [x]  clean Up
 
           - Clean Up : useEffect를 사용할때 코드가 Destory될때 작동하는 함수이다. useEffect함수 내에 코드를 실행하고 return 후에 코드를 작성해주면 된다.  
           사용방법:  useEffect(()=>{aFunction return()=> cleanUp Function},[])
