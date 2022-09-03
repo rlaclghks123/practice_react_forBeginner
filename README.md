@@ -1,6 +1,23 @@
 # 1. React for Beginner-2022
 
+# Contents
+- [Contents](#contents)
+  - [Preview](#preview)
+  - [Dom](#dom)   
+  - [Virtual DOM](#virtual-dom)
+  - [Virtual DOM을 사용하는 이유](#virtual-dom을-사용하는-이유)
+  - [React DOM](#react-dom)
+  - [DOM 작동원리](#dom-작동원리)
+  - [React](#react)
+  - [JSX](#jsx)
+  - [State](#state)
+  - [Props](#props)
+  - [Prop Types](#prop-types)
+  - [Create-React-App](#create-react-app)
+  - [UseEffect](#useeffect)
+  - [Clean Up](#clean-up)
 
+## Preview
 | Feature     | Image                                      |
 | ----------- | ------------------------------------------ |
 | Home Page   | <img src="img/home.jpg" width="300"><br>   |
@@ -10,16 +27,15 @@
 <br>
 <br>
 
-- ## <배운 이론 및 사용된 기술>
 
-  - - [x]  Dom(document Object Model)   
+##  Dom
           
-          - DOM이란, 객체를 통해 구조화된 문서를 표현하는 방법이다.
+          - DOM이란 Document Object Model로서, 객체를 통해 구조화된 문서를 표현하는 방법이다.
           - DOM은 트리형태로 되어 있어서 특정 node를 찾을 수도 있고 수정하거나 제거 할 수 있다.
 
    ---
 
-  - - [x]  Virtual DOM
+## Virtual DOM
           
            - VirtualDOM을 이용하면 실제 DOM에 접근하여 조작하는 대신에, 이를 추상화시킨 자바스크립트 객체를 구성하여 사용한다.
            
@@ -30,7 +46,7 @@
            - 리액트가 모든 처리를 대신 해주기 때문에 DOM API 조작 작업을 신경쓸 필요가 없다.
    ---
 
-  - - [x]  Virtual DOM을 사용하는 이유.
+## Virtual DOM을 사용하는 이유.
           
            - 큰 규모의 웹을 사용할 경우 스크롤을 내리다보면 수많은 데이터 로딩이 되고 각 데이터를 표현하는 요소도 많아지게 된다. 이와 같은 요소의 갯수가 몇백개 몇천개 단위로 많아진 상태에서 DOM에 직접 접근하여 변화를 주면 성능상 이유가 발생하게 된다. 
 
@@ -39,7 +55,7 @@
             --> 하지만 Virtual DOM을 사용하면 최소한으로 DOM을 실행하기 떄문에 성능이 느려지지 않는다.
    ---   
 
-  - - [x]  React DOM
+## React DOM
           
           - React DOM이란 Virtual DOM에서 HTML을 생성하는 데 필요한 라이브러리이다.
 
@@ -48,7 +64,7 @@
           - render 메소드와 서버에서 사용하기 위한 renderToString과 renderToStaticMarkup 메소드가 있다.
    ---
 
-  - - [x]  DOM 작동원리
+## DOM 작동원리
           
           1. 데이터가 업데이트 되면, 전체 UI를 Virtual DOM에 리렌더링 한다.
           
@@ -59,15 +75,14 @@
           ==> 따라서 React는 지속해서 데이터가 변화하는 대규모 애플리케이션 구축에 적합하다. 그리고 추가적으로 React에서 추가된 Redux를 사용하면 Flux패턴(단방향)을 사용하게 된다.
    ---   
 
-
-  - - [x]  React
+## React
          
           -  React는 페이스북에서 개발하여 웹에서 상호작용하는 UI를 만들기 위해 사용하는 JavaScript의 Library 이다.
           
           - 웹에서도 사용할수 있고, React-native를 통해 앱으로도 사용할 수 있다.
     ---
 
-  - - [x]  JSX
+## JSX
          
           -  JavaScript의 확장 문법이며 공식 JavaScript문법은 아니지만, babel을 통해 변환하여 사용 할 수 있다. 
           문법 규칙 : 1. 컴포넌트에 여러 요소가 있다면 반드시 부모 요소 하나로 감싸야 한다.
@@ -80,7 +95,7 @@
                   ex) {name==='chiman' ? (<h1>CHI MAN</h1>) : (<h1>Anonymous</h1>)} 
 
                      
-  - - [x]  State
+## State
          
           
           - State : 변수 대신 사용하는 데이터의 저장 공간이며 데이터가 변경되면, 자동으로 Re Render하여 새로고침 없이 동작시킬 수 있다.
@@ -96,7 +111,7 @@
                 ex) <button>onClick={onClick}<button> 
         ---
 
-  - - [x]  Props    
+## Props    
  
           - Props : properties의 줄임말으로서 부모컴포넌트로 부터 자식 컴포넌트에 데이터를 보낼 수 있는 방법이다. 함수에서 인자를 보내는것 과 비슷하다.
           style, event , text, boolean 많은것들을 props로 보낼 수 있다. 
@@ -112,7 +127,7 @@
 
    ---
 
-  - - [x]  Prop Types
+## Prop Types
      
           - Prop Types : Props로 주는 데이터의 형식을 지정 하여 에러를 방지 할 수 있는 패키지이다.
 
@@ -123,8 +138,7 @@
             2. 원하는 컴포넌트의 type을 지정해준다.
             Ex) Button.propTypes = { text: PropTypes.string.isRequired }
 
-
-  - - [x]  Create-React-App
+## Create-React-App
  
           - Create-React-App : 간단히 CRA 라고 부르며, CRA는 리액트 개발을 바로 시작할 수 있도록 프로젝트 구조 작업, 설정 작업 등을 자동으로 진행해주는 도구이자 명령어이다.  특정 환경의 개발을 바로 진행할 수 있도록 만든 기초 환경을 통틀어 보일러 플레이트(boiler plate)라고 부르기도 하는데, CRA는 그러한 보일러 플레이트의 일종입다.  React Application을 만들때 가장 좋은 Tool이며 분할 방식 하기에 아주 좋다.
 
@@ -135,8 +149,8 @@
             4. 사용할 폴더를 생성 or 사용하지 않는폴더를 삭제 등 작업한다.
             5. npm start를 통해 실행한다.
       ---
-      
-  - - [x]  useEffect
+  
+## UseEffect
  
           - useEffect : React가 계속 rerender할때 한번만 실행후 rerender되지 않도록 하는 함수로서, API호출이나 중요한 일을 할때와 같이 한번만 코드를 실행 하고, 값이 변하지 않는 한 re render되지 않도록 한다.
           사용방법
@@ -145,7 +159,7 @@
           3. useEffect를 사용한다. ex) useEffect(Afunction, [keyword]) => keyword가 변화할때 Afunction이 한번만 작동한다.
           2-2. 만약 한번만 사용하고 싶다면 []를 빈 배열로 작성해준다. Ex) useEffect(Afunction, [])
 
-  - - [x]  clean Up
+## Clean Up
 
           - Clean Up : useEffect를 사용할때 코드가 Destory될때 작동하는 함수이다. useEffect함수 내에 코드를 실행하고 return 후에 코드를 작성해주면 된다.  
           사용방법:  useEffect(()=>{aFunction return()=> cleanUp Function},[])
